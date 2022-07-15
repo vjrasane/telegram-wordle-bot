@@ -27,7 +27,7 @@ const getConfig = (env: NodeJS.Dict<string>) => {
   const mode = maybe(Mode, "development").verify(env.NODE_ENV);
   return {
     mode,
-    apiToken: string.verify(env.TELEGRAM_API_TOKEN),
+    apiToken: string.verify(env.WORDLE_TELEGRAM_API_TOKEN),
     cacheDir: optional(string).transform(Maybe.fromOptional).verify(env.CACHE_DIR),
     tmpDir: maybe(string, '/tmp').verify(env.TMP_DIR),
     logLevel: maybe(LogLevel, getModeLogLevel(mode)).verify(env.LOG_LEVEL),
