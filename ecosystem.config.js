@@ -1,8 +1,8 @@
 module.exports = {
   apps : [{
     name   : "telegram-wordle-bot",
-    script : "./node_modules/.bin/ts-node",
-    args: "./index.ts",
+    script : "yarn",
+    args: "start",
     env: {
       NODE_ENV: "production",
       CACHE_DIR: "/tmp/cache",
