@@ -9,7 +9,7 @@ import { Game } from './src/game';
 const config = getConfig(process.env);
 const logger = createLogger(config.logLevel);
 
-logger.debug(`Config: ${JSON.stringify(config, undefined, 2)}`);
+logger.debug(`Options: ${JSON.stringify(config.game, undefined, 2)}`);
 
 const cache = new FileCache<Record<number, Game>>(
   "wordle-game-cache", config, logger
